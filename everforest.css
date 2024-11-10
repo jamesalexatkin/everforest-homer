@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+/* 
+    Everforest theme for Homer
+    Forked from the Catppuccin theme: https://github.com/mrpbennett/catppuccin-homer
+*/
+
+/* Non-colour changes */
+
+/* Adds spacing to the bottom of cards */
+body #app .card-content {
+    margin-bottom: 0.55rem;
+}
+
+/* Custom font using Fira Code */
+body #bighead .navbar a {
+    font-family: 'Fira Code', monospace;
+}
+
+body #app .title {
+    font-family: 'Fira Code', monospace;
+}
+
+/* Light theme */
+
+#app.theme-default.light {
+    /* Background Colors */
+    --everforest-light-bg-dim: #F6F0E1;
+    --everforest-light-bg0: #FFF9E8;
+    --everforest-light-bg1: #F9F3E4;
+    --everforest-light-bg2: #F4EFDF;
+    --everforest-light-bg3: #EFEBDA;
+    --everforest-light-bg4: #EBE6D5;
+    --everforest-light-bg5: #D2DAC2;
+    --everforest-light-bg-visual: #F0F2D4;
+    --everforest-light-bg-red: #FFE4DD;
+    --everforest-light-bg-green: #F1F4D7;
+    --everforest-light-bg-blue: #EAF4ED;
+    --everforest-light-bg-yellow: #FDF1D4;
+
+    /* Foreground Colors */
+    --everforest-light-fg: #646A73;
+    --everforest-light-red: #F85552;
+    --everforest-light-orange: #F57D26;
+    --everforest-light-yellow: #DFA000;
+    --everforest-light-green: #8DA101;
+    --everforest-light-aqua: #35A77C;
+    --everforest-light-blue: #3A94C5;
+    --everforest-light-purple: #DF69BA;
+    --everforest-light-grey0: #A6B0A0;
+    --everforest-light-grey1: #919B84;
+    --everforest-light-grey2: #7D8778;
+
+    /* Status Line Colors */
+    --everforest-light-statusline1: #8DA101;
+    --everforest-light-statusline2: #646A73;
+    --everforest-light-statusline3: #F85552;
+
+    --highlight-primary: var(--everforest-light-bg0);
+    --highlight-secondary: var(--everforest-light-bg1);
+    --highlight-hover: var(--everforest-light-bg-green);
+    --background: var(--everforest-light-bg0);
+    --card-background: var(--everforest-light-bg1);
+    --text: var(--everforest-light-fg);
+    --text-header: var(--everforest-light-fg);
+    --text-title: var(--everforest-light-fg);
+    --text-subtitle: var(--everforest-light-green);
+    --link: var(--everforest-light-green);
+    --link-hover: var(--everforest-light-red);
+}
+
+/* Header */
+
+#app.theme-default.light .logo {
+    color: var(--everforest-light-purple);
+}
+
+#app.theme-default.light .first-line .headline {
+    color: var(--everforest-light-yellow);
+}
+
+#app.theme-default.light .navbar-start i {
+    color: var(--everforest-light-green);
+}
+
+#app.theme-default.light [title='Auto-switch'] {
+    color: var(--everforest-light-purple);
+}
+
+#app.theme-default.light [title='Dark theme'] {
+    color: var(--everforest-light-orange);
+}
+
+#app.theme-default.light .navbar-item .fa-columns {
+    color: var(--everforest-light-green);
+}
+
+#app.theme-default.light .navbar-item .fa-list {
+    color: var(--everforest-light-aqua);
+}
+
+#app.theme-default.light .search-bar .search-label:before {
+    color: var(--everforest-light-yellow);
+}
+
+#app.theme-default.light .search-bar input {
+    background-color: var(--everforest-light-bg3);
+    color: var(--everforest-light-fg);
+}
+
+#app.theme-default.light .search-bar>input:nth-child(2) {
+    color: var(--everforest-light-fg);
+}
+
+#app.theme-default.light .search-bar input:focus-visible {
+    outline: none;
+}
+
+/* Message */
+
+#app.theme-default.light .message-header {
+    color: var(--everforest-light-fg);
+    background-color: var(--everforest-light-bg1);
+    border-style: none none solid none;
+    border-width: thin;
+}
+
+#app.theme-default.light .is-info .message-header {
+    border-color: var(--everforest-light-aqua);
+}
+
+#app.theme-default.light .is-info .message-header i {
+    color: var(--everforest-light-aqua);
+}
+
+#app.theme-default.light .is-success .message-header {
+    border-color: var(--everforest-light-green);
+}
+
+#app.theme-default.light .is-success .message-header i {
+    color: var(--everforest-light-green);
+}
+
+#app.theme-default.light .is-warning .message-header {
+    border-color: var(--everforest-light-orange);
+}
+
+#app.theme-default.light .is-warning .message-header i {
+    color: var(--everforest-light-orange);
+}
+
+#app.theme-default.light .is-danger .message-header {
+    border-color: var(--everforest-light-red);
+}
+
+#app.theme-default.light .is-danger .message-header i {
+    color: var(--everforest-light-red);
+}
+
+/* Cards */
+
+#app.theme-default.light .tag {
+    background-color: var(--everforest-light-green);
+    color: var(--everforest-light-fg-dark);
+}
+
+#app.theme-default.light .status.unknown::before {
+    background-color: var(--everforest-light-yellow);
+    border-color: var(--everforest-light-yellow);
+    box-shadow: 0 0 5px 1px var(--everforest-light-yellow);
+}
+
+#app.theme-default.light .status.bad::before {
+    background-color: var(--everforest-light-red);
+    border-color: var(--everforest-light-red);
+    box-shadow: 0 0 5px 1px var(--everforest-light-red);
+}
+
+#app.theme-default.light .status.running::before {
+    background-color: var(--everforest-light-green);
+    border-color: var(--everforest-light-green);
+    box-shadow: 0 0 5px 1px var(--everforest-light-green);
+}
+
+#app.theme-default.light .card:hover {
+    background-color: var(--everforest-light-bg-visual);
+}
+
+/* Footer */
+#app.theme-default.light .footer {
+    color: var(--everforest-light-fg);
+}
+
+/* Dark theme */
+
+#app.theme-default.dark {
+    /* Background Colors */
+    --everforest-dark-bg-dim: #232A2E;
+    --everforest-dark-bg0: #2D353B;
+    --everforest-dark-bg1: #343F44;
+    --everforest-dark-bg2: #3D484D;
+    --everforest-dark-bg3: #475258;
+    --everforest-dark-bg4: #4F585E;
+    --everforest-dark-bg5: #56635F;
+    --everforest-dark-bg-visual: #543A48;
+    --everforest-dark-bg-red: #514045;
+    --everforest-dark-bg-green: #425047;
+    --everforest-dark-bg-blue: #3A515D;
+    --everforest-dark-bg-yellow: #4D4C43;
+
+    /* Foreground Colors */
+    --everforest-dark-fg: #D3C6AA;
+    --everforest-dark-red: #E67E80;
+    --everforest-dark-orange: #E69875;
+    --everforest-dark-yellow: #DBBC7F;
+    --everforest-dark-green: #A7C080;
+    --everforest-dark-aqua: #83C092;
+    --everforest-dark-blue: #7FBBB3;
+    --everforest-dark-purple: #D699B6;
+    --everforest-dark-grey0: #7A8478;
+    --everforest-dark-grey1: #859289;
+    --everforest-dark-grey2: #9DA9A0;
+
+    /* Status Line Colors */
+    --everforest-dark-statusline1: #A7C080;
+    --everforest-dark-statusline2: #D3C6AA;
+    --everforest-dark-statusline3: #E67E80;
+
+    --highlight-primary: var(--everforest-dark-bg0);
+    --highlight-secondary: var(--everforest-dark-bg1);
+    --highlight-hover: var(--everforest-dark-bg-green);
+    --background: var(--everforest-dark-bg0);
+    --card-background: var(--everforest-dark-bg1);
+    --text: var(--everforest-dark-fg);
+    --text-header: var(--everforest-dark-fg);
+    --text-title: var(--everforest-dark-fg);
+    --text-subtitle: var(--everforest-dark-green);
+    --link: var(--everforest-dark-green);
+    --link-hover: var(--everforest-dark-red);
+}
+
+/* Header */
+
+#app.theme-default.dark .logo {
+    color: var(--everforest-dark-purple);
+}
+
+#app.theme-default.dark .first-line .headline {
+    color: var(--everforest-dark-yellow);
+}
+
+#app.theme-default.dark .navbar-start i {
+    color: var(--everforest-dark-green);
+}
+
+#app.theme-default.dark [title='Auto-switch'] {
+    color: var(--everforest-dark-purple);
+}
+
+#app.theme-default.dark [title='Dark theme'] {
+    color: var(--everforest-dark-orange);
+}
+
+#app.theme-default.dark .navbar-item .fa-columns {
+    color: var(--everforest-dark-green);
+}
+
+#app.theme-default.dark .navbar-item .fa-list {
+    color: var(--everforest-dark-aqua);
+}
+
+#app.theme-default.dark .search-bar .search-label:before {
+    color: var(--everforest-dark-yellow);
+}
+
+#app.theme-default.dark .search-bar input {
+    background-color: var(--everforest-dark-bg3);
+    color: var(--everforest-dark-fg);
+}
+
+#app.theme-default.dark .search-bar>input:nth-child(2) {
+    color: var(--everforest-dark-fg);
+}
+
+#app.theme-default.dark .search-bar input:focus-visible {
+    outline: none;
+}
+
+/* Message */
+
+#app.theme-default.dark .message-header {
+    color: var(--everforest-dark-fg);
+    background-color: var(--everforest-dark-bg1);
+    border-style: none none solid none;
+    border-width: thin;
+}
+
+#app.theme-default.dark .is-info .message-header {
+    border-color: var(--everforest-dark-aqua);
+}
+
+#app.theme-default.dark .is-info .message-header i {
+    color: var(--everforest-dark-aqua);
+}
+
+#app.theme-default.dark .is-success .message-header {
+    border-color: var(--everforest-dark-green);
+}
+
+#app.theme-default.dark .is-success .message-header i {
+    color: var(--everforest-dark-green);
+}
+
+#app.theme-default.dark .is-warning .message-header {
+    border-color: var(--everforest-dark-orange);
+}
+
+#app.theme-default.dark .is-warning .message-header i {
+    color: var(--everforest-dark-orange);
+}
+
+#app.theme-default.dark .is-danger .message-header {
+    border-color: var(--everforest-dark-red);
+}
+
+#app.theme-default.dark .is-danger .message-header i {
+    color: var(--everforest-dark-red);
+}
+
+/* Cards */
+
+#app.theme-default.dark .tag {
+    background-color: var(--everforest-dark-green);
+    color: var(--everforest-dark-fg);
+}
+
+#app.theme-default.dark .status.unknown::before {
+    background-color: var(--everforest-dark-yellow);
+    border-color: var(--everforest-dark-yellow);
+    box-shadow: 0 0 5px 1px var(--everforest-dark-yellow);
+}
+
+#app.theme-default.dark .status.bad::before {
+    background-color: var(--everforest-dark-red);
+    border-color: var(--everforest-dark-red);
+    box-shadow: 0 0 5px 1px var(--everforest-dark-red);
+}
+
+#app.theme-default.dark .status.running::before {
+    background-color: var(--everforest-dark-green);
+    border-color: var(--everforest-dark-green);
+    box-shadow: 0 0 5px 1px var(--everforest-dark-green);
+}
+
+#app.theme-default.dark .card:hover {
+    background-color: var(--everforest-dark-bg-visual);
+}
+
+/* Footer */
+#app.theme-default.dark .footer {
+    color: var(--everforest-dark-fg);
+}
